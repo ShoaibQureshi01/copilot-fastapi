@@ -31,10 +31,6 @@ spec:
             {{- toYaml .Values.securityContext | nindent 12 }}
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
-          command:
-          - /usr/local/bin/streamlit
-          - run
-          - /app/Home.py
           env:
           - name: OPENAI_API_KEY
             valueFrom:
