@@ -4,7 +4,7 @@
 
 replicaCount: 1
 image:
-  repository: shuaibqureshi/copilot-fastapi-root
+  repository: shuaibqureshi/copilot-fastapi-root-latest
   pullPolicy: Always
   tag: latest
 imagePullSecrets: []
