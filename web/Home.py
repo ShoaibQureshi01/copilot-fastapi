@@ -23,7 +23,7 @@ st.title("💬 Kubernetes Copilot")
 # Sidebar for API configuration
 with st.sidebar:
     model = st.text_input("OpenAI Model",
-                          key="openai_api_model", value=os.getenv("OPENAI_API_MODEL", "gpt-4"))
+                          key="openai_api_model", value=os.getenv("OPENAI_API_MODEL", "K8-Copliot-POC"))
 
     # Check for OpenAI API key and configuration
     if not os.getenv("OPENAI_API_KEY", ""):

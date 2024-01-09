@@ -7,7 +7,7 @@ def process_message(message):
     prompt = message
     print(".......................................Kubernetes prompts 1............................",prompt)
 
-    chain = ReActLLM(model="gpt-4",  # default to gpt-4 if no other model specified
+    chain = ReActLLM(model="K8-Copliot-POC",  # default to gpt-4 if no other model specified
                      verbose=True,
                      enable_python=True,
                      auto_approve=True)

@@ -19,7 +19,7 @@ app.include_router(Analyze_router, prefix="/api", tags=["Analyze"])
 app.include_router(Audit_router, prefix="/api", tags=["Audit"])
 app.include_router(Diagnose_router, prefix="/api", tags=["Diagnose"])
 app.include_router(Generate_router, prefix="/api", tags=["Generate"])
-app.include_router(Home_router, prefix="/api", tags=["Home"])
+app.include_router(Home_router, prefix="/api", tags=["Kubernetese_prompt"])
 
 # Set up kubeconfig when running inside Pod
 setup_kubeconfig()

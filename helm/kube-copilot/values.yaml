@@ -11,7 +11,7 @@ imagePullSecrets: []
 nameOverride: ""
 fullnameOverride: ""
 openai:
-  apiModel: "gpt-4"
+  apiModel: "K8-Copliot-POC"
   apiBase: ""
   apiKey: ""
 google:

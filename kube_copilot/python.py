@@ -10,7 +10,7 @@ from langchain.callbacks.manager import (
 class PythonTool(PythonREPLTool):
 
     max_tokens = 2000
-    model = "gpt-4"
+    model = "K8-Copliot-POC"
 
     def trunk_tokens(self, msg):
         # TODO: workarounds for the following context length error with ChatGPT

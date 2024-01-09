@@ -21,8 +21,8 @@ logging.getLogger().addHandler(logging.StreamHandler(stream=sys.stdout))
 cmd_options = [
     click.option("--verbose", is_flag=True, default=False,
                  help="Enable verbose information of copilot execution steps"),
-    click.option("--model", default="gpt-4",
-                 help="OpenAI model to use for copilot execution, default is gpt-4"),
+    click.option("--model", default="K8-Copliot-POC",
+                 help="OpenAI model to use for copilot execution, default is K8-Copliot-POC"),
 ]
 
 

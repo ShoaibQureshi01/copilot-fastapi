@@ -6,7 +6,7 @@ from kube_copilot.prompts import get_audit_prompt
 from kube_copilot.labeler import CustomLLMThoughtLabeler
 
  
-def Audit_func(namespace: str, pod_name: str, model_name="gpt-4"):
+def Audit_func(namespace: str, pod_name: str, model_name="K8-Copliot-POC"):
     try:
 
         if not namespace or not pod_name:
@@ -20,7 +20,7 @@ def Audit_func(namespace: str, pod_name: str, model_name="gpt-4"):
  
         # Run the audit chain with the generated prompt
         response = chain.run(prompt, callbacks=[CustomLLMThoughtLabeler()])
- 
+        print(".........................................response..................................",response)
         return response
  
     except Exception as e:

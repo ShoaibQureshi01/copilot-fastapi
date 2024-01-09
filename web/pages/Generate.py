@@ -5,7 +5,7 @@ from kube_copilot.prompts import get_generate_prompt
 from kube_copilot.shell import KubeProcess
 from kube_copilot.labeler import CustomLLMThoughtLabeler
 
-def generate_func(prompt:str,model_name="gpt-4"):
+def generate_func(prompt:str,model_name="K8-Copliot-POC"):
     try:
         if not prompt:
             return "Please add your prompt to continue."
@@ -16,7 +16,7 @@ def generate_func(prompt:str,model_name="gpt-4"):
                      enable_python=True,
                      auto_approve=True)
 
-        response = chain.run(get_generate_prompt(prompt), callbacks="")
+        response = chain.run(get_generate_prompt(prompt), callbacks=[CustomLLMThoughtLabeler()])
 
         if response != "":
             manifests = response.removeprefix('```').removeprefix('yaml').removesuffix('```').strip()
